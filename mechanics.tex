@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+
+%\usepackage[francais]{babel} % Uncomment if the report is made in French
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{verbatim}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+%\usepackage[framed,numbered]{mcode}
+%\usepackage[labelformat=empty]{caption} % TODO REMOVE if want Figure x : before captions
+\usepackage{floatflt}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{ulem}
+\usepackage[usenames,dvipsnames,table]{xcolor}
+\usepackage[final]{pdfpages}
+\usepackage{marvosym}
+\usepackage{alltt}
+%vignettes generation:
+	%-------------------------
+% 	\usepackage[pdftex]{thumbpdf}      % Vignettes
+	
+	%Navigation parameters:
+	%-----------------------------
+	
+\usepackage[pdftex,
+	breaklinks = true, % allow links to break over lines by making links over multiple lines into PDF links to the same target (works only with PS.)
+	bookmarksnumbered = true, % Signets numérotés (false par défaut)
+	colorlinks = true, % Cette ligne et la suivante suppriment le cadre autour des liens
+	linkcolor = MidnightBlue,
+	bookmarks         = true,%     % Signets
+	pdfpagemode = UseOutlines,
+	pdfstartview      = FitH,%     % page takes all width
+	pdfpagelayout     = OneColumn,% View per  page
+	urlcolor          = MidnightBlue,%  % colors of external links
+   hypertexnames=false
+	]{hyperref}%                   % Utilisation of HyperTeX
+	
+\usepackage{url} %% for URLs (also in Bibtex)
+\definecolor{sectioncolor}{HTML}{506266} % Blue-gray color for sections
+%\definecolor{subsectioncolor}{HTML}{313153} % Dark-blue color for subsections
+\definecolor{subsectioncolor}{HTML}{3A3A63} % Dark-blue color for subsections
+\definecolor{subsubsectioncolor}{HTML}{010168} % Dark-blue color for subsubsections
+\definecolor{light-gray}{gray}{0.95}
+\definecolor{extra-gray}{gray}{0.75}
+\definecolor{medium-gray}{gray}{0.85}
+\definecolor{very-gray}{gray}{0.35}
+\definecolor{ultra-gray}{gray}{0.20}
+
+\usepackage{titlesec}
+
+\newcommand{\sectionbreak}{\clearpage}
+\titleformat{\section}[frame]
+{\normalfont}
+{\filright
+\footnotesize
+\enspace \textsc{section} \thesection\enspace}
+{8pt}
+{\color{sectioncolor}\Large\bfseries\filcenter}
+
+\titleformat{\subsection}
+{\color{subsectioncolor}\normalfont\large\bfseries}
+{\color{subsectioncolor}\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{subsubsectioncolor}\normalfont\normalsize\bfseries}
+{\color{subsubsectioncolor}\thesubsubsection}{1em}{}
+
+
+\geometry{hmargin=2cm,vmargin=2cm}
+
+\fancyhf{}
+\pagestyle{fancy}
+
+\author{Karl \begin{sc}Yeurl\end{sc}}
+\title{The Binding of Isaac — Wrath of the Lamb}
+
+\makeatletter
+\renewcommand{\maketitle}{%
+  \begin{center}
+  
+  \hfill
+%  \includegraphics[width=3.5cm]{img/logo.png}
+
+	\rule{0.8\textwidth}{1pt}
+  
+  \large{Mechanisms reference}
+  \vfill    
+  
+  \LARGE{\@title}
+  \vfill
+  
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{img/WrathLamb.png}
+  \end{figure}
+  
+  \vfill
+  \large{\@author}
+  \vfill
+  
+  Last update: \large{\@date} 
+  \end{center}
+}
+
+
+\makeatother
+
+\setlength{\headheight}{45pt}
+\lfoot{\empty}
+\cfoot{\empty}
+\rfoot{\empty}
+\setlength{\parskip}{0.15cm}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+\pagestyle{empty}
+\maketitle
+
+%paramtres Hyper-Tex:
+					%---------------------
+					\hypersetup{ % Modifiez la valeur des champs suivants
+					    pdfauthor   = {Karl Yeurl},%
+					    pdftitle    = {Report},%
+					    pdfsubject  = {Report},%
+					    pdfcreator  = {PDFLaTeX},%
+					    pdfproducer = {PDFLaTeX}}
+\newpage
+% Table des matières
+\tableofcontents
+
+\pagestyle{fancy}
+\newpage
+\lhead{\includegraphics[width=2.5cm]{img/logo.png}}
+\chead{Mechanisms of The Binding of Isaac — Wrath of the Lamb}
+\rhead{Page \thepage\ of \pageref*{LastPage}}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\interfootnotelinepenalty=10000
+\pagenumbering{arabic}
+\input{src/redchests.tex}
+\end{document}

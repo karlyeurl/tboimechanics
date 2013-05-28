@@ -1,4 +1,4 @@
-tboimechanics
+The Binding of Isaac Mechanics analysis
 =============
 
-The Binding of Isaac mechanics analysis
+See the PDF file. Work in progress, I guess. I'll update this now and then.

@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}Red Chests}{1}{section.2}
+\contentsline {subsection}{\numberline {1.1}Notes}{1}{subsection.5}
+\contentsline {subsubsection}{\numberline {1.1.1}About Guppy Items}{1}{subsubsection.6}
+\contentsline {subsubsection}{\numberline {1.1.2}About teleportation}{1}{subsubsection.7}
+\contentsline {subsection}{\numberline {1.2}Code where it happens}{2}{subsection.8}

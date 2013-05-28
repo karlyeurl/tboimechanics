@@ -1,0 +1,41 @@
+\section{Red Chests}\label{sec:redchests}
+
+\begin{wrapfigure}{r}{0.2\textwidth}
+   \begin{center}
+      \includegraphics{img/RedChest.png}
+   \end{center}
+\end{wrapfigure}
+When opening a red chest, here are the odds of what will happen\footnote{Rounded at 0.01\%.}:
+\begin{itemize}
+\item 5\% chance to teleport to the Devil room / Angel room;
+\item 7.25\% chance it spawns a soul heart;
+\item 7.25\% chance it spawns two soul hearts;
+\item 10\% chance it spawns a Guppy Item (see details and bugs in part \ref{subsec:guppyredchests});
+\item 10.88\% chance it spawns 3 blue flies;
+\item 13.6\% chance it spawns two super troll bombs;
+\item 14.51\% chance it spawns two troll bombs;
+\item 14.51\% chance it spawns two pills;
+\item 17\% chance it spawns two spiders;
+\end{itemize}
+
+
+\subsection{Notes}
+\subsubsection{About Guppy Items}\label{subsec:guppyredchests}
+If Guppy's tail isn't unlocked, 25\% chance it will be either the Dead Cat, Guppy's tail, Guppy's head or Guppy's paw.
+
+\noindent If Guppy's tail is unlocked, 20\% chance it will be either the Dead Cat, Guppy's head or Guppy's paw and 40\% chance it's Guppy's tail.\\
+
+\noindent Yes, it is a bug. There's the source, where \texttt{f1} is the item:
+\begin{alltt}
+f1 = [81, 134, 133, 145]; // Guppy's tail is 134
+if (_root.SecretUnlocked[79]) \{ // If Guppy's tail is unlocked
+   f1.push(134); // Pushing another Guppy's tail in the random pool.
+\}
+f1 = f1[random(f1.length)];
+\end{alltt}
+
+\subsubsection{About teleportation}
+The mechanics are those applying when calling teleport() to room 166. Still have to figure out if it's possible to get to the error room from there.
+
+\subsection{Code where it happens}
+See lines 30271 to 30318 from the source code.
