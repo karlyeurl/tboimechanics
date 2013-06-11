@@ -5,3 +5,8 @@
 \BOOKMARK [2][-]{subsection.8}{1.2 Code where it happens}{section.2}% 5
 \BOOKMARK [1][-]{section.9}{2 Fortune Telling Machines}{}% 6
 \BOOKMARK [2][-]{subsection.11}{2.1 Code where it happens}{section.9}% 7
+\BOOKMARK [1][-]{section.12}{3 Item Pools}{}% 8
+\BOOKMARK [2][-]{subsection.15}{3.1 Pool-specific randomization}{section.12}% 9
+\BOOKMARK [2][-]{subsection.21}{3.2 Item-specific randomization}{section.12}% 10
+\BOOKMARK [2][-]{subsection.28}{3.3 Post-processing}{section.12}% 11
+\BOOKMARK [2][-]{subsection.29}{3.4 Code where it happens}{section.12}% 12
