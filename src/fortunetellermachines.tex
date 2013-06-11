@@ -1,0 +1,30 @@
+\section{Fortune Telling Machines}\label{sec:ftmachines}
+
+\begin{wrapfigure}{r}{0.2\textwidth}
+   \begin{center}
+      \includegraphics{img/FortuneTelling.png}
+   \end{center}
+\end{wrapfigure}
+When playing a Fortune Telling Machine without the Lucky Foot, here is what happens:
+\begin{itemize}
+\item 1.10\% chance to spawn the Crystal Ball;
+\item 1.75\% chance to explode;
+\item 7.15\% chance to spawn a Spirit Heart;
+\item 10.7\% chance to spawn a Tarot Card;
+\item 14.3\% change to spawn a Trinket;
+\item 65\% chance to tell a useless fortune;
+\end{itemize}
+
+
+\noindent With the Lucky Foot:
+\begin{itemize}
+\item 5\% chance to explode;
+\item 3.2\% chance to spawn the Crystal Ball;
+\item 30.6\% chance to spawn a Tarot Card;
+\item 20.4\% to spawn a Spirit Heart;
+\item 40.8\% to spawn a Trinket;
+\end{itemize}
+
+
+\subsection{Code where it happens}
+See lines 19577 to 19604 from the source code for general probabilistic mechanics and lines 19717 to 19720 for the Crystal Ball's spawning.
